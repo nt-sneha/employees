@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>List of Employees</h1>
+    <br>
+    <br>
+ <a routerLink="employees/add/0" class="btn btn-primary">Add Employees</a>
+ <br>
+ <br>
+<table class="table table-striped">
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Email Id</th>
+        <th>Date of Birth</th>
+        <th>Date of Joining</th>
+        <th>Marrital Status</th>
+        <th>Contact No</th>
+        <th>action</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.address}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.dob}}</td>
+            <td>{{employee.doj}}</td>
+            <td>{{employee.marrital_status}}</td>
+            <td>{{employee.contact}}</td>
+            <td><a [routerLink]="['employee/edit',employee.id]">Edit</a></td>
+            <td><button (click)="onDelete(employee.id)">x</button></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<router-outlet></router-outlet>

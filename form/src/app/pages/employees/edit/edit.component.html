@@ -1,0 +1,42 @@
+<div class ="container">
+ <h2>{{header}}</h2>
+ <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="form-group">
+        <label for="">Id</label>
+        <input type="text" class="form-control" ngModel name="id">
+    </div>
+     <div class="form-group">
+         <label for="">name</label>
+         <input type="text" class="form-control" ngModel name="name"> 
+     </div>
+     <div class="form-group">
+        <label for="">Address</label>
+        <input type="text" class="form-control" ngModel name="address">
+    </div>
+    <div class="form-group">
+        <label for="">Email Id</label>
+        <input type="text" class="form-control" ngModel name="email">
+    </div>
+    <div class="form-group">
+        <label for="">Date of Birth</label>
+        <input type="text" class="form-control" ngModel name="dob">
+    </div>
+    <div class="form-group">
+        <label for="">Date of joining</label>
+        <input type="text" class="form-control"  ngModel name="doj">
+    </div>
+    <div class="form-group">
+        <label for="">Marrital status</label>
+        <input type="text" class="form-control" ngModel name="marrital_status">
+    </div>
+    <div class="form-group">
+        <label for="">Contact No</label>
+        <input type="text" class="form-control" ngModel name="contact">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-warning">save</button>
+    </div>
+
+ </form>  
+</div>
+
